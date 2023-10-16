@@ -1,5 +1,6 @@
 .navbar {
-  background-color: #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color:#D87D4A;
   color: #fff;
   padding: 10px;
   display: flex;

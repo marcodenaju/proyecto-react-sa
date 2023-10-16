@@ -1,10 +1,12 @@
-import { BsCart } from "react-icons/bs";
+import { Badge } from "@mui/material";
+import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 
 const CartWidget = () => {
   return (
     <div>
-      <span>3</span>
-      <BsCart />
+    <Badge badgeContent={0} showZero color="success">
+      <ShoppingCartTwoToneIcon color="action" />
+    </Badge>
     </div>
   );
 };

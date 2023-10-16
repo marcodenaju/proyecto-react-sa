@@ -5,7 +5,7 @@ const MaterialUi = () => {
   return (
     <div>
         <Typography color={"primary.secondary"} variant="h1">MaterialUi</Typography>
-    <Button variant="contained" color="secondary" size='small'>botoncito
+    <Button variant="contained" color="secondary" size='small'>botón
     </Button>
     </div>
   )

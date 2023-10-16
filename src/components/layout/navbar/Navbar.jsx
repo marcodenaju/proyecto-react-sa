@@ -15,10 +15,10 @@ export const Navbar = () => {
 
       <ul>
         <div className="navbar-list">
+          <li>Ketchup</li>
           <li>Salsa picante</li>
-          <li>Salsa barbacoa</li>
-          <li>Salsa cítrica</li>
-          <li>Salsa agridulce</li>
+          <li>Chimi agridulce</li>
+          <li>Chimi picantón</li>
         </div>
       </ul>
       <CartWidget />
