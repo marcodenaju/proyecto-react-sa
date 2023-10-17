@@ -1,13 +1,13 @@
 
-const Albums = ( {albums, crear } ) => {
-  return (
-    <div>
+// const Albums = ( {albums, crear } ) => {
+//   return (
+//     <div>
 
 
-        <button onClick={crear}>Crear nuevo</button>
+//         <button onClick={crear}>Crear nuevo</button>
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Albums
+// export default Albums

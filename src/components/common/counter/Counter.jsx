@@ -1,6 +1,5 @@
 
-const Counter = ( {sumar, contador, restar, onAdd }) => {
-
+const Counter = ({sumar, contador, restar, onAdd }) => {
   return (
     <div>
     <button onClick={sumar}>sumar</button>
