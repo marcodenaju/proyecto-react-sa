@@ -18,7 +18,7 @@ export const Navbar = () => {
           <li>Chimi agridulce</li>
           <li>Chimi picantón</li>
       </ul>
-      {/* <Link to="/pepito">Ir a pepito</Link> */}
+      <Link to="/pepito">Ir a pepito</Link>
       <CartWidget />
     </div>
     <Outlet/>

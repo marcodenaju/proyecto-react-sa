@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
   return (
     <div to="/cart">
-      {/* <Link to="/cart"> */}
+      <Link to="/cart">
       <Badge badgeContent={0} showZero color="primary">
         <ShoppingCartIcon color="action" />
       </Badge>
-      {/* </Link> */}
+      </Link>
     </div>
   );
 };
