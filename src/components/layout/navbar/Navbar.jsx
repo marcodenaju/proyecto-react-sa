@@ -5,24 +5,26 @@ import { Outlet, Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <>
-    <div className="containerNavbar">
-      <h4><img
+      <div className={"containerNavbar"}>
+        <Link to="/">
+          <h4><img
         src="https://res.cloudinary.com/dnixufsko/image/upload//c_thumb,w_80/v1695835129/231396019_304500691462675_5388614809897967354_n_q0u1f1.jpg"
         alt="logo"
-      />
-      </h4>
-
-      <ul className="categories">
-          <li>Ketchup</li>
-          <li>Salsa picante</li>
-          <li>Chimi agridulce</li>
-          <li>Chimi picantón</li>
-      </ul>
-      <Link to="/pepito">Ir a pepito</Link>
-      <CartWidget />
-    </div>
-    <Outlet/>
-
+      /></h4>
+        </Link>
+        <ul className="categories">
+          <Link to="/">
+            <li>Todas</li>
+          </Link>
+          <Link to="/category/salsas">
+            <li>Salsas</li>
+          </Link>
+          <Link to="/category/chimis">
+            <li>Chimis</li>
+          </Link>
+        </ul>
+        <CartWidget />
+      </div>
     </>
   );
 };

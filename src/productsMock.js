@@ -5,7 +5,7 @@ export let products = [
         price: 1000,
         stock: 5,
         description: "Salsas de San Antonio de Areco",
-        category: "Salsas",
+        category: "salsas",
         img: "https://res.cloudinary.com/dnixufsko/image/upload/v1697471917/ketchupparrillero_6_faverj.jpg",
     },
     {
@@ -14,7 +14,7 @@ export let products = [
         price: 700,
         stock: 2,
         description: "Salsas de San Antonio de Areco",
-        category: "Salsas",
+        category: "salsas",
         img: "https://res.cloudinary.com/dnixufsko/image/upload/v1697483494/ajipicante_2_okokpn.jpg",
     },
     {
@@ -23,7 +23,7 @@ export let products = [
         price: 800,
         stock: 6,
         description: "Salsas de San Antonio de Areco",
-        category: "Salsas",
+        category: "chimis",
         img: "https://res.cloudinary.com/dnixufsko/image/upload/v1697483494/chimiagridulce_1_1_i43uuk.jpg",
     },
     {
@@ -32,7 +32,7 @@ export let products = [
         price: 900,
         stock: 9,
         description: "Salsas de San Antonio de Areco",
-        category: "Salsas",
+        category: "chimis",
         img: "https://res.cloudinary.com/dnixufsko/image/upload/v1697483495/picanto%CC%81ntronco_1_atba3y.jpg",
     },
 ];

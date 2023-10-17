@@ -27,6 +27,7 @@ import {
           </Typography>
         </CardContent>
         <CardActions>
+        <Link to={`/itemDetail/${item.id}`}></Link>
           <Button size="small" variant="outlined">
             Ver detalle
           </Button>
