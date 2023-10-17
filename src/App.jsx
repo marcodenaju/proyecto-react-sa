@@ -3,11 +3,15 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 import Cart from "./components/pages/cart/Cart";
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
 import Layout from "./components/layout/Layout";
+import MaterialUi from "./materialUi/MaterialUi";
+import { ThemeProvider } from "styled-components";
+import { customTheme } from "./themeConfig";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <ThemeProvider theme={customTheme}> */}
+    <ThemeProvider theme={customTheme}>
+    <MaterialUi/>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<ItemListContainer />} />
@@ -21,8 +25,9 @@ function App() {
           <Route path="*" element={<h1>Not found</h1>} />
         </Route>
       </Routes>
-      {/* </ThemeProvider> */}
+      </ThemeProvider>
     </BrowserRouter>
+    
   );
 }
 

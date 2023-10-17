@@ -1,14 +1,14 @@
-import { Button, Typography } from '@mui/material'
-import React from 'react'
+import { Button, Typography, Card, CardContent, CardMedia, CardActions } from '@mui/material'
+
 
 const MaterialUi = () => {
   return (
-    <div>
-        <Typography color={"primary.secondary"} variant="h1">MaterialUi</Typography>
-    <Button variant="contained" color="secondary" size='small'>botón
-    </Button>
-    </div>
-  )
-}
+    <>
 
-export default MaterialUi
+
+    </>
+  );
+};
+
+
+export default MaterialUi;
