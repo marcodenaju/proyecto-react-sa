@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Counter from "./Counter";
 
-const CounterContainer = ({stock}) => {
+const CounterContainer = ({stock, onAdd }) => {
     const [ contador , setContador ] = useState(1);
 
     const sumar = () => {
@@ -18,16 +18,16 @@ if (contador > 1) {
 }
 };
 
-console.log("Me monté o actualicé")
+// console.log("Me monté o actualicé")
 
-useEffect( ()=>{
-    //petición a un servidor
-    console.log("se realizó una petición")
-} , [])
+// useEffect( ()=>{
+//     //petición a un servidor
+//     console.log("se realizó una petición")
+// } , [])
 
 
 
-    return <Counter sumar={sumar} restar={restar} contador={contador} />
+    return <Counter sumar={sumar} restar={restar} contador={contador} onAdd={onAdd} />
 };
 
 export default CounterContainer;

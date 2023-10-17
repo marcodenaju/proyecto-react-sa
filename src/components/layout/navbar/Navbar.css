@@ -1,4 +1,4 @@
-.navbar {
+.containerNavbar {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color:#D87D4A;
   color: #fff;
@@ -8,12 +8,12 @@
   align-items: center;
 }
 
-.navbar-list {
+.categories {
   list-style-type: none;
   padding: 0;
   display: flex;
 }
 
-.navbar-list li {
+.categories li {
   margin-right: 10px;
 }

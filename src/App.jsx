@@ -9,6 +9,12 @@ import CounterContainer from "./components/common/counter/CounterContainer";
 import { useState } from "react";
 import FetchingData from "./components/pages/fetchingData/FetchingData";
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
+import { FetchDos } from "./components/fetching/FetchDos";
+import { FetchUno } from "./components/fetching/FetchUno";
+import CustomModal from "./components/common/customModal/CustomModal";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cart from "./components/pages/cart/Cart";
+
 function App() {
   let saludo = "Juan";
 
@@ -27,15 +33,38 @@ function App() {
       {montar && <CounterContainer stock={9} />}
 
       <ItemListContainer saludo={saludo} x={true} />
-      <ItemDetailContainer />
+      
+      <BrowserRouter>
+      <Routes>
+
+      <Route element={<Navbar />}>
+        <Route path="/" element={ <ItemDetailContainer /> } />
+        <Route path="/cart" element={ <Cart/> } />
+        <Route path="/itemDetail" element ={ <ItemDetailContainer /> } />
+        
+        </Route>
+        <Route path="*" element={<h1>Not found</h1>} />
+        
+      </Routes>
+      </BrowserRouter>
+      {/* <FetchUno />
+      <FetchDos /> */}
       <MaterialUi/>
       {/* <CounterContainer stock={5} />
       <CounterContainer stock={6}/> */}
       </ThemeProvider>
       <FetchingData />
-      
+
+      {/* <CustomModal> 
+        <CounterContainer />
+      </CustomModal>
+
+      <CustomModal>
+        <ItemListContainer />
+      </CustomModal> */}
+
     </div>
   );
-}
+};
 
 export default App;
