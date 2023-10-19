@@ -29,7 +29,7 @@ const ProductCard = ({ item }) => {
       </CardContent>
       <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
         <Link to={`/itemDetail/${item.id}`}>
-          <Button size="small" variant="outlined" sx={{ backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'orange' }, textTransform: 'none' }}>
+          <Button size="small" variant="outlined" sx={{ backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: '#FBAF85' }, textTransform: 'none' }}>
             Ver detalle
           </Button>
         </Link>

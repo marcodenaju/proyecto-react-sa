@@ -22,4 +22,4 @@ const PruebaResponsive = () => {
   )
 }
 
-export default PruebaResponsive
+export default PruebaResponsive;
