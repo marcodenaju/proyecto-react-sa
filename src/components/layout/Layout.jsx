@@ -11,7 +11,7 @@ const Layout = () => {
       <div style={{ minHeight: "80vh" }}>
         <Outlet />
       </div>
-      <div style={{ height: "10vh" }}>
+      <div style={{ height: "40vh", paddingTop: "10vh" }}>
         <Footer />
       </div>
     </div>
