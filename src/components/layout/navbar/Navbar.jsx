@@ -9,7 +9,7 @@ export const Navbar = () => {
         <Link to="/">
           <h4>
             <img
-              src="https://res.cloudinary.com/dnixufsko/image/upload//c_thumb,w_80/v1695835129/231396019_304500691462675_5388614809897967354_n_q0u1f1.jpg"
+              src="https://res.cloudinary.com/dvciyj7v2/image/upload/v1698679863/logo_areco_c0qili.png"
               alt="logo"
             />
           </h4>

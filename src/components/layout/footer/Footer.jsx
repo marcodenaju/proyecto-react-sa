@@ -1,7 +1,5 @@
 import { Outlet } from "react-router-dom";
-// import styles from "./Footer.module.css";
 import styles from "./Footer.css";
-
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
