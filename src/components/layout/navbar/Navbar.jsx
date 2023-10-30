@@ -7,10 +7,12 @@ export const Navbar = () => {
     <>
       <div className={"containerNavbar"}>
         <Link to="/">
-          <h4><img
-        src="https://res.cloudinary.com/dnixufsko/image/upload//c_thumb,w_80/v1695835129/231396019_304500691462675_5388614809897967354_n_q0u1f1.jpg"
-        alt="logo"
-      /></h4>
+          <h4>
+            <img
+              src="https://res.cloudinary.com/dnixufsko/image/upload//c_thumb,w_80/v1695835129/231396019_304500691462675_5388614809897967354_n_q0u1f1.jpg"
+              alt="logo"
+            />
+          </h4>
         </Link>
         <ul className="categories">
           <Link to="/">

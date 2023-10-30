@@ -1,13 +1,14 @@
-import { Button, Typography, Card, CardContent, CardMedia, CardActions } from '@mui/material'
-
+import {
+  Button,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  CardActions,
+} from "@mui/material";
 
 const MaterialUi = () => {
-  return (
-    <>
-
-    </>
-  );
+  return <></>;
 };
-
 
 export default MaterialUi;

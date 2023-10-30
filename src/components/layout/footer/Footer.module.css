@@ -1,23 +1,22 @@
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: black;
-    height: 40vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  .footer-section {
-    text-align: center;
-    color: white;
-  }
-  
-  .redes-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .redes-list li {
-    margin: 5px 0;
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  height: 40vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer-section {
+  text-align: center;
+  color: white;
+}
+
+.redes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.redes-list li {
+  margin: 5px 0;
+}
