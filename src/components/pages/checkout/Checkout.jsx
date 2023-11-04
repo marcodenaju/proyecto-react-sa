@@ -37,7 +37,7 @@ const Checkout = () => {
 
   return (
     <div>
-      <h1>Estoy en el Checkout</h1>
+      <h1>Checkout</h1>
 
       <form onSubmit={handleSubmit}>
         <input

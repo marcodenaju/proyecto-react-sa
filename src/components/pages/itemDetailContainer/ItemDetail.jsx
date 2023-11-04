@@ -1,7 +1,7 @@
 import CounterContainer from "../../common/counter/CounterContainer";
 import { CardMedia, Typography, Button, Box } from "@mui/material";
 
-export const ItemDetail = ({ productSelected, onAdd }) => {
+export const ItemDetail = ({ productSelected, onAdd, initial }) => {
   return (
     <div>
       <Typography
@@ -17,7 +17,12 @@ export const ItemDetail = ({ productSelected, onAdd }) => {
         alt=""
         sx={{ maxWidth: "350px", maxHeight: "350px" }}
       />
-      <CounterContainer stock={productSelected.stock} onAdd={onAdd} />
+      <h5>ya agregaste {initial} al carrito</h5>
+      <CounterContainer
+        stock={productSelected.stock}
+        onAdd={onAdd}
+        initial={initial}
+      />
     </div>
   );
 };
