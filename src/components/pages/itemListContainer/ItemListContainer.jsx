@@ -3,6 +3,8 @@ import { products } from "../../../productsMock";
 
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import PacmanLoader from "react-spinners/PacmanLoader";
+// import Skeleton from '@mui/material/Skeleton';
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -15,13 +17,27 @@ const ItemListContainer = () => {
     );
 
     const tarea = new Promise((resolve, reject) => {
-      resolve(categoryName ? productosFiltrados : products);
+      setTimeout(() => {
+        resolve(categoryName ? productosFiltrados : products);
+      }, 2000);
     });
 
     tarea.then((res) => setItems(res)).catch((error) => console.log(error));
   }, [categoryName]);
 
-  return <ItemList items={items} />;
+
+
+  return (
+    <>
+      {items.length === 0 ? (
+        <PacmanLoader size={40} color="black" />
+      ) : (
+        <ItemList items={items} />
+      )}
+    </>
+  );
 };
+
+
 
 export default ItemListContainer;

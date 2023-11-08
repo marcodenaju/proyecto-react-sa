@@ -1,3 +1,4 @@
+import { Padding } from "@mui/icons-material";
 import Button from "@mui/material/Button";
 
 const buttonStyle = {
@@ -15,25 +16,24 @@ const addToCartButtonStyle = {
 
 const Counter = ({ sumar, contador, restar, onAdd }) => {
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
       <Button variant="contained" sx={buttonStyle} onClick={sumar}>
-        SUMAR
+        +
       </Button>
       <h4>{contador}</h4>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <Button variant="contained" sx={buttonStyle} onClick={restar}>
-          RESTAR
-        </Button>
-        <Button
-          variant="contained"
-          sx={addToCartButtonStyle}
-          onClick={() => onAdd(contador)}
-        >
-          AGREGAR AL CARRITO
-        </Button>
-      </div>
+      <Button variant="contained" sx={buttonStyle} onClick={restar}>
+        -
+      </Button>
+      <Button
+        variant="contained"
+        sx={addToCartButtonStyle}
+        onClick={() => onAdd(contador)}
+      >
+        AGREGAR AL CARRITO
+      </Button>
     </div>
   );
 };
+
 
 export default Counter;
