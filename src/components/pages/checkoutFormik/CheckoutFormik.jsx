@@ -2,6 +2,15 @@ import { Button, Grid, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
+const buttonStyle = {
+  backgroundColor: "black",
+  color: "white",
+  borderRadius: 0,
+  "&:hover": { backgroundColor: "#FBAF85" },
+  textTransform: "none",
+  marginBottom: 1,
+};
+
 const CheckoutFormik = () => {
   const { handleChange, handleSubmit, errors } = useFormik({
     initialValues: {
@@ -9,7 +18,8 @@ const CheckoutFormik = () => {
       apellido: "",
       email: "",
       password: "",
-      repetPassword: "",
+      repeatPassword: "",
+      repeatEmail: "",
     },
     onSubmit: (data) => {
       console.log(data);
@@ -26,13 +36,16 @@ const CheckoutFormik = () => {
       email: Yup.string()
         .email("Ingrese un correo válido")
         .required("Este campo es obligatorio"),
+      repeatEmail: Yup.string()
+        .email("Ingrese un correo válido")
+        .oneOf([Yup.ref("email")], "Los emails no coinciden"),
       password: Yup.string()
         .required("Este campo es obligatorio")
         .matches(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{3,15}$/, {
           message:
             "La contraseña debe tener al menos una mayúscula, una minúscula y un número",
         }),
-      repetPassword: Yup.string()
+      repeatPassword: Yup.string()
         .required("Este campo es obligatorio")
         .oneOf([Yup.ref("password")], "Las contraseñas no coinciden"),
     }),
@@ -47,6 +60,9 @@ const CheckoutFormik = () => {
     >
       <Grid item xs={6} sm={2}>
         <form onSubmit={handleSubmit}>
+          <div>
+            <h1 style={{ fontFamily: "verdana" }}>Datos para el envío</h1>
+          </div>
           <div>
             <TextField
               label="Nombre"
@@ -85,6 +101,18 @@ const CheckoutFormik = () => {
 
           <div>
             <TextField
+              label="Repetir email"
+              variant="outlined"
+              name="repeatEmail"
+              onChange={handleChange}
+              error={errors.repeatEmail ? true : false}
+              helperText={errors.repeatEmail}
+              style={{ marginBottom: 10 }}
+            />
+          </div>
+
+          <div>
+            <TextField
               label="Contraseña"
               variant="outlined"
               name="password"
@@ -99,47 +127,24 @@ const CheckoutFormik = () => {
             <TextField
               label="Repetir contraseña"
               variant="outlined"
-              name="repetPassword"
+              name="repeatPassword"
               onChange={handleChange}
-              error={errors.repetPassword ? true : false}
-              helperText={errors.repetPassword}
+              error={errors.repeatPassword ? true : false}
+              helperText={errors.repeatPassword}
               style={{ marginBottom: 10 }}
             />
           </div>
 
           <div>
             <Button
-              variant="contained"
-              type="submit"
-              style={{
-                background: "black",
-                borderRadius: 0,
-                color: "white",
-                marginBottom: 5,
-                transition: "background 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  background: "orange",
-                },
-              }}
+variant="contained" sx={buttonStyle}
             >
               Enviar
             </Button>
           </div>
 
           <div>
-            <Button
-              variant={"outlined"}
-              type="button"
-              style={{
-                background: "black",
-                borderRadius: 0,
-                color: "white",
-                marginBottom: 5,
-                transition: "background 0.3s",
-              }}
-            >
+            <Button variant="contained" sx={buttonStyle}>
               Cancelar
             </Button>
           </div>

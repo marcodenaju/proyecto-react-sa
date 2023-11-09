@@ -20,60 +20,62 @@ const Checkout = () => {
   const handleSubmit = (evento) => {
     evento.preventDefault();
 
-    if (userInfo.nombre.length < 4 || !userInfo.email.includes("@")) {
-      if (userInfo.nombre.length < 4) {
-        setErrors({
-          ...errors,
-          nombre: "Indique un nombre con al menos 4 carateres",
-        });
-      }
-      if (!userInfo.email.includes("@")) {
-        setErrors({ ...errors, email: "Indique un mail válido" });
-      }
+    // if (userInfo.nombre.length < 4 || !userInfo.email.includes("@")) {
+    //   if (userInfo.nombre.length < 4) {
+    //     setErrors({
+    //       ...errors,
+    //       nombre: "Indique un nombre con al menos 4 carateres",
+    //     });
+    //   }
+    //   if (!userInfo.email.includes("@")) {
+    //     setErrors({ ...errors, email: "Indique un mail válido" });
+    //   }
 
-      return;
-    }
+    //   return;
+    // }
   };
 
-  return (
-    <div>
-      <h1>Checkout</h1>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="nombre"
-          onChange={handleChange}
-          placeholder="Nombre"
-        />
-        <span style={{ color: "crimson", fontSize: " 0.5rem" }}>
-          {errors.nombre}
-        </span>
+  // return (
+  //   <div>
+  //     <h1>Datos para el envío</h1>
 
-        <input
-          type="text"
-          name="apellido"
-          onChange={handleChange}
-          placeholder="Apellido"
-        />
-        <span style={{ color: "crimson", fontSize: " 0.5rem" }}>
-          {errors.apellido}
-        </span>
+  //     <form onSubmit={handleSubmit}>
 
-        <input
-          type="text"
-          name="email"
-          onChange={handleChange}
-          placeholder="email"
-        />
-        <span style={{ color: "crimson", fontSize: " 0.5rem" }}>
-          {errors.email}
-        </span>
 
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  );
+  //       <input
+  //         type="text"
+  //         name="nombre"
+  //         onChange={handleChange}
+  //         placeholder="Nombre"
+  //       />
+  //       <span style={{ color: "crimson", fontSize: " 0.5rem" }}>
+  //         {errors.nombre}
+  //       </span>
+  //       <input
+  //         type="text"
+  //         name="apellido"
+  //         onChange={handleChange}
+  //         placeholder="Apellido"
+  //       />
+  //       <span style={{ color: "crimson", fontSize: " 0.5rem" }}>
+  //         {errors.apellido}
+  //       </span>
+
+  //       <input
+  //         type="text"
+  //         name="email"
+  //         onChange={handleChange}
+  //         placeholder="email"
+  //       />
+  //       <span style={{ color: "crimson", fontSize: " 0.5rem" }}>
+  //         {errors.email}
+  //       </span>
+
+  //       <button type="submit">Enviar</button>
+  //     </form>
+  //   </div>
+  // );
 };
 
 export default Checkout;

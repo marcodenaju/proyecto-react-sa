@@ -1,12 +1,12 @@
-import { Button, IconButton } from "@mui/material";
+import { Button, CardMedia, IconButton } from "@mui/material";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteIcon from "@mui/icons-material/Delete";
 
-import { createTheme } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
+import { createTheme } from "@mui/material/styles";
+import { purple } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
@@ -14,7 +14,7 @@ const theme = createTheme({
       main: purple[500],
     },
     secondary: {
-      main: '#f44336',
+      main: "#f44336",
     },
   },
 });
@@ -22,6 +22,8 @@ const theme = createTheme({
 const buttonStyle = {
   backgroundColor: "black",
   color: "white",
+  marginRight: 1,
+  marginTop: 1,
   borderRadius: 0,
   "&:hover": { backgroundColor: "#FBAF85" },
   textTransform: "none",
@@ -51,25 +53,30 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "verdana",
+        marginLeft: "40px",
+        marginTop: "40px",
+        fontSize: "12px",
+      }}
+    >
       <h1>CARRITO DE COMPRAS</h1>
 
       {cart.map((product) => (
         <div key={product.id}>
-          <h4> {product.title}</h4>
-          <h4>{product.price}</h4>
-          <h4>cantidad: {product.quantity}</h4>
-          <IconButton onClick={()=>deleteProductById(product.id)}>
-
-          <DeleteIcon color="secondary" />
+          <h2>Producto: {product.title}</h2>
+          <h2>Precio por unidad: ${product.price}</h2>
+          <h2>Cantidad: {product.quantity}</h2>
+          <IconButton onClick={() => deleteProductById(product.id)}>
+            <DeleteIcon color="secondary" />
           </IconButton>
-         
         </div>
       ))}
 
       {cart.length > 0 && (
         <div>
-          <h5>El total a pagar es de: {total}</h5>
+          <h3>El total a pagar es de: ${total}</h3>
 
           <Link to="/checkout">
             <Button variant="contained" sx={buttonStyle}>
