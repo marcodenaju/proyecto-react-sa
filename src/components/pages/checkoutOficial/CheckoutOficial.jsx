@@ -26,7 +26,7 @@ const CheckoutOficial = () => {
       repeatEmail: "",
     },
     onSubmit: (data) => {
-      console.log(data);
+      
       handleFormSubmit();
     },
     validationSchema: Yup.object({
@@ -88,9 +88,12 @@ const CheckoutOficial = () => {
       {orderId ? (
         <div>
           <h2>Gracias por su compra, su N° de comprobante es {orderId}</h2>
-          <Link to="/">            <Button variant="contained" sx={buttonStyle}>
+          <Link to="/">
+            {" "}
+            <Button variant="contained" sx={buttonStyle}>
               Seguir comprando
-            </Button></Link>
+            </Button>
+          </Link>
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -164,11 +167,7 @@ const CheckoutOficial = () => {
             />
           </div>
           <div>
-            <Button
-              type="submit"
-              variant="contained"
-              sx={buttonStyle}
-            >
+            <Button type="submit" variant="contained" sx={buttonStyle}>
               Comprar
             </Button>
           </div>

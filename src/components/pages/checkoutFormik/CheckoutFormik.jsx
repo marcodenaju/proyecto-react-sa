@@ -22,7 +22,7 @@ const CheckoutFormik = () => {
       repeatEmail: "",
     },
     onSubmit: (data) => {
-      console.log(data);
+      
     },
     validationSchema: Yup.object({
       nombre: Yup.string()
