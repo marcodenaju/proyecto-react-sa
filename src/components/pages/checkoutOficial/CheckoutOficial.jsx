@@ -135,7 +135,7 @@ const CheckoutOficial = () => {
           </div>
           <div>
             <TextField
-              label="Repetir email"
+              label="Confirmar email"
               variant="outlined"
               name="repeatEmail"
               onChange={handleChange}

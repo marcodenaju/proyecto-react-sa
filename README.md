@@ -1,11 +1,36 @@
-# React + Vite
+# Esta es mi tienda
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Se utilizaron estas herramientas:
+- react
+- Material UI
+- Yup
+- Formik
+- Firebase
 
-Currently, two official plugins are available:
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salsa Areco</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# proyecto-react
-# proyecto-react-sa
-# proyecto-react-sa
+```
+```css
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+![](public/vite.svg)
+
+[react](https://es.react.dev/)
